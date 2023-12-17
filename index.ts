@@ -43,7 +43,7 @@ app.post("/webhook", (request: Request, response: Response) => {
     event = stripe.webhooks.constructEvent(
       request.body,
       request.headers["stripe-signature"] ?? "",
-      "whsec_f7ce17204288dc4845bfe4cded99c98981764e62e429881af62e2077e8c2db6b"
+      "<WEBHOOK KEY>"
     );
     // console.log(JSON.stringify(event));
   } catch (error) {
